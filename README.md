@@ -51,7 +51,10 @@ Using NLP, baseline models with different models were built using _CountVectoriz
 
 Since LogisticRegression with CountVectorizer has the highest score, we will try to optimize it for better results
 
+#### min_df and max_df values
 
+By elimnating words that occur rarely and too often, we can see is model performace improves. By iterating thru a range for each parameter, we can collect scores and check model performance.
+_min_df_ = [1,5]; _max_df_ = [1500,1505]
 
 
 

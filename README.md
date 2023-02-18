@@ -54,7 +54,52 @@ Since LogisticRegression with CountVectorizer has the highest score, we will try
 #### min_df and max_df values
 
 By elimnating words that occur rarely and too often, we can see is model performace improves. By iterating thru a range for each parameter, we can collect scores and check model performance.
-_min_df_ = [1,5]; _max_df_ = [1500,1505]
+Ranges set:  _min_df_ = [1,5]; _max_df_ = [1500,1505]
+
+<enter image here>
+
+Clearly, we've made the model worse. Our initial f1-score was 0.62 but here we're maxed out at 0.574.
+
+### n-grams
+
+The idea behind n-grams is that sometimes word pairings or short phrases are better. For eg: 'black sheep' is more informative than 'black' and 'sheep' seperately.
+We can set this using the n-gram parameter to (1,2)
+
+<enter image here>
+
+f1-score remains unchanged from our earlier peak of 0.62
+
+### Stemming using PorterStemmer
+
+With stemming, we use the use root of the word. For eg: ran,runs,running all stem from the word run. This way we reduce the number of features and can improve accuracy of the model.
+
+
+<enter image here>
+
+Again, model performmace stagnates at 0.62.
+
+### Word Embedding - Word2Vec
+
+Word Embeddings are a type of vectorization strategy that computes word vectors from a text corpus by training a neural network, which results in a high-dimensional embedding space, where each word in the corpus is a unique vector in that space.
+Here, we will import the Word2vec vector from the open source _gensim_ library and use the _skip gram_ architecture for modelling.
+
+<enter image here>
+
+Model performace has only worsened with this strategy
+
+## Next Steps
+
+1. Since the iPad is the most popular product,Acme Online could look for opportunities to boost sales. Acme Online could also maybe expand their portfolio buy offering tablets from other manufacturers to see if they will gain any traction.
+2. More data is definitely recommended. Current data is very imbalanced impacting model performance.
+3. The hyperparameters of the Word2Vec vectorizer i.e number of epochs, size of the vectors etc. can be tuned to see if results improve.
+4. Part-of-Speech tagging can be used to create more features.
+5. Ensemble methods like XGBoost and Adaboost can also be trialled for modelling along with other word embedding techniques like fastText and Glove.
+
+
+
+
+
+
 
 
 

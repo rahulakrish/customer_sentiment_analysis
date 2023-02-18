@@ -56,16 +56,15 @@ Since LogisticRegression with CountVectorizer has the highest score, we will try
 By elimnating words that occur rarely and too often, we can see is model performace improves. By iterating thru a range for each parameter, we can collect scores and check model performance.
 Ranges set:  _min_df_ = [1,5]; _max_df_ = [1500,1505]
 
-<enter image here>
+![image](https://user-images.githubusercontent.com/108379254/219899171-c59e2bff-e63f-421f-aeb6-46430ef3cd26.png)
 
 Clearly, we've made the model worse. Our initial f1-score was 0.62 but here we're maxed out at 0.574.
 
 ### n-grams
 
-The idea behind n-grams is that sometimes word pairings or short phrases are better. For eg: 'black sheep' is more informative than 'black' and 'sheep' seperately.
-We can set this using the n-gram parameter to (1,2)
+The idea behind n-grams is that sometimes word pairings or short phrases are better. For eg: 'black sheep' is more informative than 'black' and 'sheep' seperately. We can set this using the n-gram parameter to (1,2)
 
-<enter image here>
+![image](https://user-images.githubusercontent.com/108379254/219899188-3aeab171-c5a3-4d7d-ac47-987bd209e2f0.png)
 
 f1-score remains unchanged from our earlier peak of 0.62
 
@@ -73,8 +72,7 @@ f1-score remains unchanged from our earlier peak of 0.62
 
 With stemming, we use the use root of the word. For eg: ran,runs,running all stem from the word run. This way we reduce the number of features and can improve accuracy of the model.
 
-
-<enter image here>
+![image](https://user-images.githubusercontent.com/108379254/219899223-57901b9d-71cd-4c96-b36f-f53178b53814.png)
 
 Again, model performmace stagnates at 0.62.
 
@@ -83,7 +81,7 @@ Again, model performmace stagnates at 0.62.
 Word Embeddings are a type of vectorization strategy that computes word vectors from a text corpus by training a neural network, which results in a high-dimensional embedding space, where each word in the corpus is a unique vector in that space.
 Here, we will import the Word2vec vector from the open source _gensim_ library and use the _skip gram_ architecture for modelling.
 
-<enter image here>
+![image](https://user-images.githubusercontent.com/108379254/219899248-33573f84-2a8c-4a14-aa28-61b6ef640833.png)
 
 Model performace has only worsened with this strategy
 

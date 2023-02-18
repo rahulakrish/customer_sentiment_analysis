@@ -93,7 +93,18 @@ Model performace has only worsened with this strategy
 4. Part-of-Speech tagging can be used to create more features.
 5. Ensemble methods like XGBoost and Adaboost can also be trialled for modelling along with other word embedding techniques like fastText and Glove.
 
+## More Information
+ - [Notebook](project.ipynb)
+ - [Presentation](presentation.pdf)
 
+## Repository Structure
+
+```
+├── README.md
+├── notebook.pdf
+├── project.ipynb
+├── presentation.pdf
+└── repo.pdf
 
 
 

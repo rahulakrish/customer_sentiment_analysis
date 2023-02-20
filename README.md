@@ -102,8 +102,8 @@ Model performace has only worsened with this strategy
 ```
 ├── README.md
 ├── notebook.pdf
-├── project.ipynb
 ├── presentation.pdf
+├── project.ipynb 
 └── repo.pdf
 
 

@@ -85,13 +85,21 @@ Here, we will import the Word2vec vector from the open source _gensim_ library a
 
 Model performace has only worsened with this strategy
 
-## Next Steps
+# Conclusions
 
-1. Since the iPad is the most popular product,Acme Online could look for opportunities to boost sales. Acme Online could also maybe expand their portfolio buy offering tablets from other manufacturers to see if they will gain any traction.
-2. More data is definitely recommended. Current data is very imbalanced impacting model performance.
-3. The hyperparameters of the Word2Vec vectorizer i.e number of epochs, size of the vectors etc. can be tuned to see if results improve.
-4. Part-of-Speech tagging can be used to create more features.
-5. Ensemble methods like XGBoost and Adaboost can also be trialled for modelling along with other word embedding techniques like fastText and Glove.
+### Recommendations
+
+Since the iPad is the most popular product,Acme Online could look for opportunities to boost sales. Acme Online could also maybe expand their portfolio buy offering tablets from other manufacturers to see if they will bring in more revenue.
+
+### Modelling
+
+1. Part-of-Speech tagging can be used to create more features.
+2. Ensemble methods like XGBoost and Adaboost can also be trialed for modelling along with other word embedding techniques like fastText and Glove.
+
+### Limitations
+
+More varied data is desirable. Current data is very imbalanced and localized to a time and place thus possibly skewing forecasts for the future. As next steps, that would be the starting point. We can then use it to improve model efficiency.
+
 
 ## More Information
  - [Notebook](project.ipynb)
